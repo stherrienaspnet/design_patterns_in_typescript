@@ -68,13 +68,15 @@ namespace Patterns {
 	}
 
 	export function menu() : void {
-		var rl = readline.createInterface({
-					input: process.stdin,
-					output: process.stdout
-			});
+		// var rl = readline.createInterface({
+		// 			input: process.stdin,
+		// 			output: process.stdout
+		// 	});
 
 		printMenu();
-	   	rl.question("Which pattern would you like to check?   ", function(answer) {
+		let answer:number = 1;
+		console.log('add breakpoint at line 78 to override the value from the debugger')
+	   	// rl.question("Which pattern would you like to check?   ", function(answer) {
 			switch(+answer) {
 				case 1 : show(SingletonPattern); break;
 				case 2 : show(AbstractFactoryPattern); break;
@@ -100,9 +102,9 @@ namespace Patterns {
 				case 22 : show(TemplateMethodPattern); break;
 				case 23 : show(VisitorPattern); break;
 				default : break;
-			}
-			rl.close();
-		});
+		 	}
+		// 	rl.close();
+		// });
 	}
 
 	function show(Pattern : any) : void {
